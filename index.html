@@ -15,6 +15,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
@@ -26,7 +32,7 @@
   <!-- slick lib  -->
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
   </style>
 
 
@@ -39,7 +45,7 @@
     AOS.init();
   </script>
 
-  <div class="header">
+  <section class="header">
     <div class="container">
       <div class="header_container">
 
@@ -72,7 +78,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
 
   <section class="hero">
     <div class="container">
@@ -87,7 +93,7 @@
   <section class="our-platform">
     <div class="container">
       <div class="platform-content">
-        <h2>We’ve Built A Plateform To Buy And Sell Shares</h2>
+        <h2>We’ve Built A Plateform To Buy And Sell Shares.</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor et dolore
           magna aliqua Ut enim ad minim veniam.</p>
         <div class="logo" data-aos="slide-up" data-aos-offset="20">
@@ -107,7 +113,9 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/safe-secure.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/safe-secure.png" alt="Safe">
+            </div>
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Safe & Secure</a>
@@ -117,7 +125,9 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/early-bonus.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/early-bonus.png" alt="Safe">
+            </div>
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Early Bonus</a>
@@ -127,7 +137,9 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/universal-access.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/universal-access.png" alt="Safe">
+            </div>
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Universal Access</a>
@@ -137,7 +149,10 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/secure-storage.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/secure-storage.png" alt="Safe">
+            </div>
+
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Secure Storage</a>
@@ -147,7 +162,9 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/low-cost.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/low-cost.png" alt="Safe">
+            </div>
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Low Cost</a>
@@ -157,7 +174,9 @@
 
         <div class="ctb-sub">
           <div class="container-box-icon">
-            <img src="accets/image/several-profit.png" alt="Safe">
+            <div class="box-rotate">
+              <img src="accets/image/several-profit.png" alt="Safe">
+            </div>
           </div>
           <div class="container-box-content">
             <a href="#" class="cbc-title">Several Profit</a>
@@ -174,23 +193,26 @@
   <section class="roadmap_section">
     <div class="container">
       <div class="roadmap-content-header">
-      <div class="roadmap-header">
-        <h2>OUR ROADMAP</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.</p>
+        <div class="roadmap-header">
+          <h2>OUR ROADMAP</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        </div>
+        <div class="roadmap-years">
+          <button class="year-button active" id="button-year-2021" onclick="onClickYear(2021)"
+            data-year="2021">2021</button>
+          <button class="year-button" id="button-year-2022" onclick="onClickYear(2022)" data-year="2022">2022</button>
+          <button class="year-button" id="button-year-2023" onclick="onClickYear(2023)" data-year="2023">2023</button>
+        </div>
       </div>
-      <div class="roadmap-years">
-        <button class="year-button active" data-year="2021">2021</button>
-        <button class="year-button" data-year="2022">2022</button>
-        <button class="year-button" data-year="2023">2023</button>
-      </div>
-    </div>
 
       <div class="roadmap_container">
         <div class="roadmap_dashed_line"></div>
-        <div class="roadmap_list">
-          <div class="roadmap_item" id="year-2021">
-            <div class="roadmap_item_content  ">
+        <!-- 2021 -->
+        <div class="roadmap_list active" id="roadmap_2021">
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
               <span class="roadmap_year">Q1-2021</span>
               <div class="roadmap_content">
                 <!-- top content  -->
@@ -207,6 +229,8 @@
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                   </ul>
                 </div>
                 <!-- bottom content  -->
@@ -214,7 +238,7 @@
             </div>
           </div>
           <div class="roadmap_item">
-            <div class="roadmap_item_content ">
+            <div class="roadmap_item_content">
               <span class="roadmap_year">Q2-2021</span>
               <div class="roadmap_content">
                 <!-- top content  -->
@@ -229,8 +253,9 @@
                     <li><span>&#10004;</span> Lorem, ipsum dolor55.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
                   </ul>
                 </div>
                 <!-- bottom content  -->
@@ -238,7 +263,7 @@
             </div>
           </div>
           <div class="roadmap_item">
-            <div class="roadmap_item_content ">
+            <div class="roadmap_item_content">
               <span class="roadmap_year">Q3-2021</span>
               <div class="roadmap_content">
                 <!-- top content  -->
@@ -250,11 +275,12 @@
                 <div class="roadmap_bottom">
                   <div class="roadmap_bottom_l"></div>
                   <ul class="roadmap_bottom_r">
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
-                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
                   </ul>
                 </div>
                 <!-- bottom content  -->
@@ -277,6 +303,37 @@
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2021 -->
+        <!-- 2021 -->
+        <div class="roadmap_list" id="roadmap_2022">
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q1-2022</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                     <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
                   </ul>
@@ -285,16 +342,196 @@
               </div>
             </div>
           </div>
-
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q2-2022</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor55.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q3-2022</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q4-2022</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- 2021 -->
+        <!-- 2021 -->
+        <div class="roadmap_list" id="roadmap_2023">
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q1-2023</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q2-2023</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor55.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q3-2023</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+          <div class="roadmap_item">
+            <div class="roadmap_item_content">
+              <span class="roadmap_year">Q4-2023</span>
+              <div class="roadmap_content">
+                <!-- top content  -->
+                <span class="roadmap_icon">
+                  &#10004;
+                </span>
+                <!-- top content  -->
+                <!-- bottom content  -->
+                <div class="roadmap_bottom">
+                  <div class="roadmap_bottom_l"></div>
+                  <ul class="roadmap_bottom_r">
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span>&#10004;</span> Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                    <li><span class="ti-layout-line-solid"></span>Lorem, ipsum dolor.</li>
+                  </ul>
+                </div>
+                <!-- bottom content  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2021 -->
       </div>
     </div>
   </section>
-  <!-- end roadmap   -->
 
+
+  
   <section class="token-metrics-section">
     <div class="container">
-
       <div class="token-metrics-header">
         <h2>TOKEN METRICS</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -310,20 +547,25 @@
         <div class="allocation-details" data-aos="slide-left" data-aos-offset="80">
           <h3>ALLOCATION OF FUNDS</h3>
           <ul>
-            <li><span class="ecosystem"></span> 75% Ecosystem
-              <div class="percentage-bar ecosystem" style="width: 75%;"></div>
+            <li>
+              <div class="percentage-bar ecosystem"></div>
+              <span class="ecosystem"></span> 75% Ecosystem
             </li>
-            <li><span class="advisors"></span> 60% Advisors
-              <div class="percentage-bar advisors" style="width: 60%;"></div>
+            <li>
+              <div class="percentage-bar advisors"></div>
+              <span class="advisors"></span> 60% Advisors
             </li>
-            <li><span class="private-sale"></span> 30% Private Sale
-              <div class="percentage-bar sale " style="width: 35%;"></div>
+            <li>
+              <div class="percentage-bar sale "></div>
+              <span class="private-sale"></span> 30% Private Sale
             </li>
-            <li><span class="public-sale"></span> 45% Public Sale
-              <div class="percentage-bar marketing" style="width: 45%;"></div>
+            <li>
+              <div class="percentage-bar marketing"></div>
+              <span class="public-sale"></span> 45% Public Sale
             </li>
-            <li><span class="business"></span> 15% Business
-              <div class="percentage-bar business" style="width: 15%;"></div>
+            <li>
+              <div class="percentage-bar business"></div>
+              <span class="business"></span> 15% Business
 
             </li>
           </ul>
@@ -342,9 +584,17 @@
         <div class="team-member">
 
           <img src="accets/image/team-1.jpg" alt="Mike Anderson">
-          <div class="rating-star">
+          <!-- <div class="rating-star">
             <img src="accets/image/star.png" alt="Rating-Star">
+          </div> -->
+          <div class="star-container">
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
           </div>
+          
           <h3>MIKE ANDERSON</h3>
           <p>Founder & CEO</p>
           <div class="social-links">
@@ -356,8 +606,12 @@
         <div class="team-member">
 
           <img src="accets/image/team-2.jpg" alt="Sarah Jenifer">
-          <div class="rating-star">
-            <img src="accets/image/star.png" alt="Rating-Star">
+          <div class="star-container">
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
           </div>
           <h3>SARAH JENIFER</h3>
           <p>Senior Consultant</p>
@@ -366,13 +620,16 @@
             <a href="#"><i class="fab fa-twitter" style="color: white;"></i></a>
             <a href="#"><i class="fab fa-instagram" style="color: white;"></i></a>
           </div>
-
         </div>
         <div class="team-member">
 
           <img src="accets/image/team-3.jpg" alt="Paul Harisona">
-          <div class="rating-star">
-            <img src="accets/image/star.png" alt="Rating-Star">
+          <div class="star-container">
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
+            <i class="ti-star"></i>
           </div>
           <h3>PAUL HARISONA</h3>
           <p>Creative Manager</p>
@@ -591,6 +848,10 @@
     </div>
   </footer>
   <script src="accets/js/index.js"></script>
+  <script src="accets/js/testimonials.js"></script>
+  <script src="accets/js/brand-logo.js"></script>
+  <script src="accets/js/roadmap.js"></script>
+
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="./slick/slick/slick.min.js"></script>
@@ -602,8 +863,35 @@
         slidesToScroll: 1,
         speed: 300,
         infinite: true,
+        // nextArrow: '.nextArrow',
+        // prevArrow: '.prevArrow'
       });
     });
+
+
+    const onClickYear = (year) => {
+      const otherRoadmapYear = document.getElementsByClassName('roadmap_list');
+      const yearButtons = document.querySelectorAll('.year-button');
+      yearButtons.forEach((button) => {
+        button.classList.remove('active');
+      });
+      const selectedButton = document.getElementById(`button-year-${year}`);
+      if (selectedButton) {
+        selectedButton.classList.add('active');
+      }
+      Array.from(otherRoadmapYear).forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      const roadmapListByYear = document.getElementById(`roadmap_${year}`);
+      if (roadmapListByYear) {
+
+        roadmapListByYear.classList.add('active');
+
+
+        $(roadmapListByYear).slick('setPosition');
+      }
+    };
   </script>
 </body>
 

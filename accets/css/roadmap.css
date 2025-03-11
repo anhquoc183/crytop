@@ -1,42 +1,44 @@
 .roadmap_section {
+    padding-top: 100px;
     background-color: #231c6f;
     color: #ffffff;
 }
-.roadmap-content-header{
+
+.roadmap-content-header {
     display: flex;
     flex-direction: row;
 }
-.roadmap-header {
 
-    float: left;
+.roadmap-header {
     margin-bottom: 30px;
     width: 70%;
-  }
-  
-  .roadmap-header h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-  
-  .roadmap-header p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #ddd;
-  }
+}
 
-  .roadmap-years {
-    
-    float: right;
-    display: flex;
-    padding-top: 70px;
-    padding-left: 82px;   
-     /* width: 30%; */
+.roadmap-header h2 {
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 84px;
+}
+
+.roadmap-header p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    padding-top: 26px;
+}
+
+.roadmap-years {
+    margin-left: 80px;
+    height: 60px;
+    margin-top: 60px;
+
+    /* width: 30%; */
 }
 
 .year-button {
     background-color: transparent;
-    border: 1px solid #FFA500;
-    color: #FFA500;
+    border: 1px solid #c63b04;
+    color: #c63b04;
     padding: 8px 16px;
     margin-left: 10px;
     cursor: pointer;
@@ -44,24 +46,31 @@
 }
 
 .year-button.active {
-    background-color: #FFA500;
+    background-color: #c63b04;
     color: white;
 }
 
 .roadmap_container {
-    
     position: relative;
+    padding-bottom: 90px;
 }
 
 .roadmap_dashed_line {
     position: absolute;
     top: 34px;
     width: 100%;
-    border: 2px dashed #ee871a;
-    
+    border: 2px dashed white;
+
 }
 
-.roadmap_list {}
+.roadmap_list {
+    display: none;
+
+}
+
+.roadmap_list.active {
+    display: block;
+}
 
 .roadmap_item {}
 
@@ -71,7 +80,6 @@
     font-size: 22px;
     font-weight: 500;
     line-height: 26px;
-    margin-right: 340px;
 }
 
 .roadmap_content {
@@ -83,7 +91,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: orange;
+    background-color: #c63b04;
     color: #ffffff;
     padding: 4px;
     width: 20px;
@@ -98,7 +106,7 @@
 
 .roadmap_bottom_l {
     margin-left: 10px;
-    border: 1px dashed #d4e21b;
+    border: 1px dashed #fff;
 }
 
 .roadmap_bottom_r {
@@ -112,4 +120,21 @@
     li span {
         margin-right: 6px;
     }
+}
+
+
+/* custome arrow button  */
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+    top: 120%;
+}
+
+.slick-arrow.slick-prev {
+    left: 46%;
+
+}
+
+.slick-arrow.slick-next {
+    right: 46%;
+
 }
