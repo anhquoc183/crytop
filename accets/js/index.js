@@ -1,127 +1,116 @@
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const yearButtons = document.querySelectorAll(".year-button");
+
+  
+  yearButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Xóa class "active" khỏi tất cả các button
+      yearButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Thêm class "active" cho button được click
+      this.classList.add("active");
+
+      // Lấy giá trị của data-year từ button được click
+      const selectedYear = this.dataset.year;
+
+      // Ẩn tất cả các roadmap_item_content
+      const roadmapItemContents = document.querySelectorAll(".roadmap_item_content");
+      roadmapItemContents.forEach((content) => {
+        content.style.display = "none";
+      });
+
+      // Hiển thị các roadmap_item_content tương ứng với năm được chọn
+      const roadmapItems = document.querySelectorAll(".roadmap_item");
+      roadmapItems.forEach((item) => {
+        if (item.id === `year-${selectedYear}`) {
+          // Nếu có ID khớp, hiển thị tất cả các roadmap_item_content bên trong
+          const contentsInItem = item.querySelectorAll(".roadmap_item_content");
+          contentsInItem.forEach((content) => {
+            content.style.display = "block";
+          });
+        } else {
+          
+          const contentsInItem = item.querySelectorAll(".roadmap_item_content");
+          contentsInItem.forEach((content) => {
+            content.style.display = "none";
+          });
+        }
+      });
+    });
+  });
+
+  
+  const firstYearButton = document.querySelector(".year-button.active");
+  if (firstYearButton) {
+    const firstYear = firstYearButton.dataset.year;
+    const firstRoadmapItem = document.getElementById(`year-${firstYear}`);
+    if (firstRoadmapItem) {
+      const contentsInFirstItem = firstRoadmapItem.querySelectorAll(".roadmap_item_content");
+      contentsInFirstItem.forEach((content) => {
+        content.style.display = "block";
+      });
+    }
+  }
+});
 
 
+const slider = document.querySelector(".testimonials");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-// let slideIndices = {
-//     '2021': 1,
-//     '2022': 1,
-//     '2023': 1
-//   };
-//   const slidesPerPage = 3;
+const testimonials = Array.from(slider.children);
+const visibleItems = 4; // Luôn hiển thị 4 phần tử
+let currentIndexx = 0;
 
-//   document.addEventListener('DOMContentLoaded', function() {
-//       // Initially show the 2021 timeline and hide others
-//       showYearTimeline('2021');
+testimonials.forEach((item) => {
+  let clone = item.cloneNode(true);
+  slider.appendChild(clone);
+}); 
 
-//       // Add event listeners to year buttons
-//       const yearButtons = document.querySelectorAll('.year-button');
-//       yearButtons.forEach(button => {
-//           button.addEventListener('click', function() {
-//               const year = this.dataset.year;
-//               showYearTimeline(year);
+const testimonialWidth = testimonials[0].offsetWidth + 20; // Lấy width + margin
+const totalItems = slider.children.length; // Số lượng item đã nhân đôi
 
-//               // Remove 'active' class from all buttons and add it to the clicked button
-//               yearButtons.forEach(btn => btn.classList.remove('active'));
-//               this.classList.add('active');
-//           });
-//       });
-//   });
+// Cập nhật vị trí ban đầu (dịch sang trái để tạo hiệu ứng vô hạn)
+slider.style.transform = `translateX(${-currentIndexx * testimonialWidth}px)`;
 
-//   function showYearTimeline(year) {
-//       // Hide all year timelines
-//       const yearTimelines = document.querySelectorAll('.year-timeline');
-//       yearTimelines.forEach(timeline => {
-//           timeline.style.display = 'none';
-//       });
+function updateSlider() {
+  slider.style.transition = "transform 0.5s ease-in-out";
+  slider.style.transform = `translateX(${-currentIndexx * testimonialWidth}px)`;
+}
 
-//       // Show the selected year's timeline
-//       const selectedTimeline = document.getElementById('year-' + year);
-//       if (selectedTimeline) {
-//           selectedTimeline.style.display = 'block';
-//       }
+// Xử lý nút Next
+nextBtn.addEventListener("click", () => {
+  currentIndexx++;
 
-//       // Initialize the slider for the selected year
-//       showDivs(slideIndices[year], year);
-//   }
+  updateSlider();
 
-//   function plusDivs(n, year) {
-//     slideIndices[year] += n;
-//     showDivs(slideIndices[year], year);
-//   }
+  // Khi đến cuối danh sách, ngay lập tức nhảy về đầu mà không gây giật
+  if (currentIndexx >= totalItems - visibleItems) {
+    setTimeout(() => {
+      slider.style.transition = "none";
+      currentIndexx = 0;
+      updateSlider();
+    }, 500);
+  }
+});
 
-//   function showDivs(n, year) {
-//     var slides = document.querySelectorAll('#year-' + year + ' .mySlides');
-//     if (n > slides.length - slidesPerPage + 1) {slideIndices[year] = 1;}
-//     if (n < 1) {slideIndices[year] = slides.length - slidesPerPage + 1;}
-
-//     for (let i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//     }
-//     for (let i = slideIndices[year] - 1; i < slideIndices[year] + slidesPerPage - 1; i++) {
-//       if (slides[i]) {
-//         slides[i].style.display = "block";
-//       }
-//     }
-//   }
-
-
-
-// const slider = document.querySelector(".testimonials");
-// const prevBtn = document.getElementById("prev");
-// const nextBtn = document.getElementById("next");
-
-// const testimonials = Array.from(slider.children);
-// const visibleItems = 4; // Luôn hiển thị 4 phần tử
-// let currentIndex = 0;
-
-// // Nhân đôi danh sách để tạo hiệu ứng vòng lặp mượt mà
-// testimonials.forEach((item) => {
-//   let clone = item.cloneNode(true);
-//   slider.appendChild(clone);
-// });
-
-// const testimonialWidth = testimonials[0].offsetWidth + 20; // Lấy width + margin
-// const totalItems = slider.children.length; // Số lượng item đã nhân đôi
-
-// // Cập nhật vị trí ban đầu (dịch sang trái để tạo hiệu ứng vô hạn)
-// slider.style.transform = `translateX(${-currentIndex * testimonialWidth}px)`;
-
-// function updateSlider() {
-//   slider.style.transition = "transform 0.5s ease-in-out";
-//   slider.style.transform = `translateX(${-currentIndex * testimonialWidth}px)`;
-// }
-
-// // Xử lý nút Next
-// nextBtn.addEventListener("click", () => {
-//   currentIndex++;
-
-//   updateSlider();
-
-//   // Khi đến cuối danh sách, ngay lập tức nhảy về đầu mà không gây giật
-//   if (currentIndex >= totalItems - visibleItems) {
-//     setTimeout(() => {
-//       slider.style.transition = "none";
-//       currentIndex = 0;
-//       updateSlider();
-//     }, 500);
-//   }
-// });
-
-// // Xử lý nút Prev
-// prevBtn.addEventListener("click", () => {
-//   if (currentIndex === 0) {
-//     slider.style.transition = "none";
-//     currentIndex = totalItems - visibleItems;
-//     updateSlider();
-//     setTimeout(() => {
-//       slider.style.transition = "transform 0.5s ease-in-out";
-//       currentIndex--;
-//       updateSlider();
-//     }, 50);
-//   } else {
-//     currentIndex--;
-//     updateSlider();
-//   }
-// });
+// Xử lý nút Prev
+prevBtn.addEventListener("click", () => {
+  if (currentIndexx === 0) {
+    slider.style.transition = "none";
+    currentIndexx = totalItems - visibleItems;
+    updateSlider();
+    setTimeout(() => {
+      slider.style.transition = "transform 0.5s ease-in-out";
+      currentIndexx--;
+      updateSlider();
+    }, 50);
+  } else {
+    currentIndexx--;
+    updateSlider();
+  }
+});
 
 
 // document.addEventListener("DOMContentLoaded", () => {
@@ -227,7 +216,7 @@ function showNextLogo() {
   // Tính toán vị trí bắt đầu
   logo.style.left = `${containerWidth}px`;
 
-  // Animation để di chuyển logo
+ 
   setTimeout(() => {
    logo.style.left = `-${logoWidth + logoSpacing}px`; // Di chuyển sang trái
 
@@ -236,9 +225,9 @@ function showNextLogo() {
     logo.classList.remove('active'); // Ẩn logo
     currentIndex++;
     showNextLogo(); // Hiển thị logo tiếp theo
-   }, 500); // Thời gian animation (phải khớp với CSS transition)
+   }, 100); // Thời gian animation (phải khớp với CSS transition)
 
-  }, 10); // Đợi một chút để kích hoạt animation
+  }, 0); // Đợi một chút để kích hoạt animation
  }
 }
 

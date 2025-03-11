@@ -2,8 +2,54 @@
     background-color: #231c6f;
     color: #ffffff;
 }
+.roadmap-content-header{
+    display: flex;
+    flex-direction: row;
+}
+.roadmap-header {
+
+    float: left;
+    margin-bottom: 30px;
+    width: 70%;
+  }
+  
+  .roadmap-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .roadmap-header p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ddd;
+  }
+
+  .roadmap-years {
+    
+    float: right;
+    display: flex;
+    padding-top: 70px;
+    padding-left: 82px;   
+     /* width: 30%; */
+}
+
+.year-button {
+    background-color: transparent;
+    border: 1px solid #FFA500;
+    color: #FFA500;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.year-button.active {
+    background-color: #FFA500;
+    color: white;
+}
 
 .roadmap_container {
+    
     position: relative;
 }
 
@@ -25,6 +71,7 @@
     font-size: 22px;
     font-weight: 500;
     line-height: 26px;
+    margin-right: 340px;
 }
 
 .roadmap_content {

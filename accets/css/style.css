@@ -1039,7 +1039,7 @@ text-align: center;
 }
 
 .footer-column ul li a:hover {
-  text-decoration: underline;
+  color: rgba(255, 89, 0, 0.744);
 }
 
 .footer-column p {
@@ -1058,16 +1058,13 @@ text-align: center;
 }
 
 .social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #444; /* Màu nền tối hơn */
-  color: white;
-  text-decoration: none;
-  margin-right: 5px;
+  width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 100%;
+    text-align: center;
+    display: block;
+    overflow: hidden;
 }
 
 .social-icons a:hover {
