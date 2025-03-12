@@ -4,7 +4,7 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
 const testimonials = Array.from(slider.children);
-const visibleItems = 4; // Luôn hiển thị 4 phần tử
+const visibleItems = 4; 
 let currentIndexx = 0;
 
 testimonials.forEach((item) => {
@@ -12,10 +12,8 @@ testimonials.forEach((item) => {
   slider.appendChild(clone);
 }); 
 
-const testimonialWidth = testimonials[0].offsetWidth + 20; // Lấy width + margin
-const totalItems = slider.children.length; // Số lượng item đã nhân đôi
-
-// Cập nhật vị trí ban đầu (dịch sang trái để tạo hiệu ứng vô hạn)
+const testimonialWidth = testimonials[0].offsetWidth + 20; 
+const totalItems = slider.children.length; 
 slider.style.transform = `translateX(${-currentIndexx * testimonialWidth}px)`;
 
 function updateSlider() {
@@ -23,13 +21,11 @@ function updateSlider() {
   slider.style.transform = `translateX(${-currentIndexx * testimonialWidth}px)`;
 }
 
-// Xử lý nút Next
 nextBtn.addEventListener("click", () => {
   currentIndexx++;
 
   updateSlider();
 
-  // Khi đến cuối danh sách, ngay lập tức nhảy về đầu mà không gây giật
   if (currentIndexx >= totalItems - visibleItems) {
     setTimeout(() => {
       slider.style.transition = "none";
@@ -39,7 +35,7 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Xử lý nút Prev
+
 prevBtn.addEventListener("click", () => {
   if (currentIndexx === 0) {
     slider.style.transition = "none";
@@ -55,3 +51,36 @@ prevBtn.addEventListener("click", () => {
     updateSlider();
   }
 });
+
+
+
+
+// const slider = document.querySelector('.testimonials');
+// let isDown = false;
+// let startX;
+// let scrollLeft;
+
+// slider.addEventListener('mousedown', (e) => {
+//   isDown = true;
+//   slider.classList.add('active');
+//   startX = e.pageX - slider.offsetLeft;
+//   scrollLeft = slider.scrollLeft;
+// });
+
+// slider.addEventListener('mouseleave', () => {
+//   isDown = false;
+//   slider.classList.remove('active');
+// });
+
+// slider.addEventListener('mouseup', () => {
+//   isDown = false;
+//   slider.classList.remove('active');
+// });
+
+// slider.addEventListener('mousemove', (e) => {
+//   if (!isDown) return;
+//   e.preventDefault();
+//   const x = e.pageX - slider.offsetLeft;
+//   const walk = (x - startX) * 2; 
+//   slider.scrollLeft = scrollLeft - walk;
+// });

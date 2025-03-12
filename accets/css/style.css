@@ -235,6 +235,8 @@ body {
 
 .platform-content {
   margin: 0 auto;
+  padding: 0 20px;
+  
 }
 
 .platform-content h2 {
@@ -248,7 +250,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 33px;
-
 }
 
 .platform-content .logo {
@@ -481,14 +482,13 @@ body {
   color: #fff;
   text-align: center;
 }
-
-.container h2 {
+.team-section-header h2 {
   font-size: 74px;
   font-weight: 700;
   line-height: 84px;
 }
 
-.container p {
+.team-section-header p {
   font-weight: 400;
   font-size: 20px;
   line-height: 33px;
@@ -532,21 +532,46 @@ body {
   border-radius: 30px;
 }
 
-.star-container {
+/* .star-container {
   position: absolute;
   display: flex;
   justify-content: center; 
   width: 150px;
-  bottom: 280px;
+  bottom: 260px;
   left: 40%; 
   transform: translateX(-50%) translateY(30px); 
- 
-}
+  background-color: #fff;
+} */
+  .star-container {
+    position: absolute;
+    display: flex;
+    justify-content: center; 
+    width: 150px;
+    bottom: 240px;
+    left: 50%; /* Căn giữa theo trục ngang */
+    transform: translateX(-50%) translateY(30px); 
+    background-color: #fff;
+    padding: 10px; /* Đảm bảo có khoảng cách trong nền trắng */
+    border-radius: 8px; /* Làm bo góc nếu muốn */
+    opacity: 0; /* Ẩn mặc định */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  
+  }
+  
 
-.team-member:hover .star-container {
+
+.team-member  img:hover + .star-container {
   transform: translateX(-50%) translateY(0); /* Khi hover, dịch chuyển lên trên */
   opacity: 1;
   visibility: visible;
+}
+
+.fa  {
+  font-size: 14px;
+  color: transparent;
+  transition: color 0.3s ease;
+  text-align: center;
 }
 
 
@@ -556,8 +581,14 @@ body {
   transition: color 0.3s ease;
 }
 
-.team-member:hover .star-container .ti-star {
+/* .team-member img:hover + .star-container .ti-star {
   animation: star-color 1s linear forwards;
+} */
+
+.team-member img:hover + .star-container .fa {
+  animation: star-color 1s linear forwards;
+  position: relative; 
+  left: 0; 
 }
 
 @keyframes star-color {
@@ -566,25 +597,25 @@ body {
     transform: translateX(0);
   }
   100% {
-    color: yellow;
-    transform: translateX(100%);
+    color: rgba(255, 89, 0, 0.744);
+    transform: scale(1.2);
   }
 }
 
-.team-member:hover .star-container .ti-star:nth-child(1) {
+.team-member:hover .star-container .fa:nth-child(1) {
   animation-delay: 0s;
 }
-.team-member:hover .star-container .ti-star:nth-child(2) {
+.team-member:hover .star-container .fa:nth-child(2) {
   animation-delay: 0.2s;
 }
-.team-member:hover .star-container .ti-star:nth-child(3) {
-  animation-delay: 0.4s;
+.team-member:hover .star-container .fa:nth-child(3) {
+  animation-delay: 0.5s;
 }
-.team-member:hover .star-container .ti-star:nth-child(4) {
-  animation-delay: 0.6s;
+.team-member:hover .star-container .fa:nth-child(4) {
+  animation-delay: 0.75s;
 }
-.team-member:hover .star-container .ti-star:nth-child(5) {
-  animation-delay: 0.8s;
+.team-member:hover .star-container .fa:nth-child(5) {
+  animation-delay: 1s;
 }
 
 .team-member h3,
@@ -598,140 +629,244 @@ body {
 }
 
 
-.social-links {
-  justify-content: space-around;
-  padding-right: 20px;
+.social-links a {
+  position: relative; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  font-size: 22px;
+  background-color: #3b5998;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  overflow: hidden; 
 }
 
-.social-links :hover {
-  background-color: white;
+.social-links a:hover {
+  background-color: #1d3057;
 }
+
+
+.social-links a i {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-links a:hover i {
+  animation: jump-in-out 0.6s ease-in-out;
+}
+
+
+@keyframes jump-in-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-50px); 
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+}
+
+
+
+
+.social-links a:nth-child(1) {
+  background-color: #3b5998; 
+}
+
+.social-links a:nth-child(2) {
+  background-color: #1da1f2; 
+}
+
+.social-links a:nth-child(3) {
+  background-color: #e4405f; 
+}
+
+
 
 .social-links a {
   margin-left: 30px;
 }
 
 .testimonials-section {
-  padding-top: 60px;
+  padding: 80px 0;
   background-color: #191970;
   color: #fff;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.container h2 {
+.testimonials-section-header h2{
+  text-align: center;
   font-size: 74px;
   font-weight: 700;
   line-height: 84px;
 }
 
-.container p {
+.testimonials-section-header {
+  margin: 0px auto;
+  max-width: 1000px;
   font-weight: 400;
   font-size: 20px;
   line-height: 33px;
   padding-top: 26px;
-  max-width: 1000px;
-  margin: 0px auto;
+  text-align: center;
+
+
 }
 .testimonials-wrapper {
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
-  width: 100%;
   position: relative;
 }
 
 .testimonials {
   display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
+  gap: 30px;
+  transition: transform 0.6s ease-in-out;
   width: max-content;
-  /* Đảm bảo chứa đủ các testimonials */
+  cursor: grab;
 }
-
+.testimonials:active {
+  cursor: grabbing;
+}
 .testimonial {
-  background-color: transparent;
-  padding: 10px;
+  background: #1f1f6f;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: calc(100% / 4-20px);
-  /* Đảm bảo 4 testimonials hiển thị */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 270px; /* Đảm bảo đủ kích thước */
   flex-shrink: 0;
-  max-width: 300px;
   box-sizing: border-box;
-  border: 25px bold #191970;
   text-align: left;
-
+  min-height: 280px;
 }
 
+.img-star-testi {
+  margin-bottom: 30px;
+}
+
+.testimonial p {
+  font-weight: 400;
+    line-height: 26px;
+    padding-top: 13px;
+}
+
+/* Căn chỉnh ảnh đại diện và thông tin khách hàng */
 .customer {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center; /* Đưa ảnh và text thẳng hàng */
+  gap: 15px;
+  padding-top: 20px;
 }
 
 .customer img {
-  width: auto;
-  height: auto;
-  border-radius: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.customer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .customer h3 {
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 0;
 }
 
 .customer p {
   font-size: 14px;
   color: #d3d2e2;
-  line-height: 18px;
+  margin: 0;
 }
 
+/* Căn chỉnh nút slider xuống dưới */
 .slider-navigation {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px; /* Đẩy xuống phía dưới */
 }
 
 .slider-navigation button {
-  background-color: transparent;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 16px;
   cursor: pointer;
-  font-size: 18px;
-  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
 .slider-navigation button:hover {
-  background-color: #555;
+  background-color: rgba(255, 89, 0, 0.9);
 }
+
+
+
+
 
 
 .news-section {
+  padding-top: 60px;
   background-color: #191970;
   color: white;
 }
-
+/* 
 .news-section h2,
 .news-section p {
   text-align: center;
+} */
+
+.news-header h2 {
+  text-align: center;
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 84px;
 }
+
+.news-header p {
+  margin: 0px auto;
+  max-width: 1000px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  padding-top: 26px;
+  text-align: center;
+
+}
+
 
 .news-articles {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* Cho phép các bài viết xuống dòng khi không đủ chỗ */
 
 }
 
 .news-article {
   width: 30%;
-  /* Điều chỉnh theo bố cục mong muốn */
   margin-bottom: 20px;
   background-color: transparent;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-  /* border-top-left-radius: 35px;
-  border-top-right-radius: 35px; */
   overflow: hidden;
-  /* Đảm bảo hình ảnh không tràn ra ngoài */
 }
 
 .news-img {
@@ -747,7 +882,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  /* Loại bỏ khoảng trắng thừa dưới hình ảnh */
   border-radius: 35px;
 }
 
@@ -763,10 +897,7 @@ body {
 }
 
 .article-details a {
-  /* display: block;
-  text-decoration: none;
-  color: #333;
-  margin-bottom: 8px; */
+ 
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
@@ -779,7 +910,6 @@ body {
 
 .article-details a:hover {
   color: #007bff;
-  /* Màu xanh dương khi di chuột qua */
 }
 
 .article-details a:last-child {
