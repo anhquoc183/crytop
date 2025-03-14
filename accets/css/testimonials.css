@@ -1,0 +1,18 @@
+.testimonials {
+  padding-top: 60px;
+}
+
+.slick-arrow.testimonials-next-button,
+.slick-arrow.testimonials-prev-button {
+  position: absolute;
+  font-size: 20px;
+  top: 110%;
+}
+
+.slick-arrow.testimonials-prev-button {
+  left: 46%;
+}
+
+.slick-arrow.testimonials-next-button {
+  right: 46%;
+}

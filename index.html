@@ -7,7 +7,7 @@
   <title>Cryptcon</title>
   <link rel="stylesheet" href="accets/css/style.css">
   <link rel="stylesheet" href="accets/font/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
   <script src="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -29,6 +29,7 @@
   <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="./accets/css/reset.css" />
   <link rel="stylesheet" type="text/css" href="./accets/css/roadmap.css" />
+  <link rel="stylesheet" type="text/css" href="./accets/css/testimonials.css" />
   <!-- slick lib  -->
 
   <style>
@@ -48,17 +49,20 @@
   <section class="header">
     <div class="container">
       <div class="header_container">
-
-
         <div class="logo-header">
           <img src="accets/image/logo.png" alt="Cryptcon Logo">
         </div>
         <div class="header-left">
-          <ul>
-            <li><a href="#" style="color: red;">Home</a></li>
-            <li class="dropdown">
-              <a href="#">Pages</a>
-              <ul class="dropdown-menu">
+          <ul class="header-left-list">
+            <li class="header-left-item">
+              <a href="#" class="header-link">Home</a>
+            </li>
+            <li class="header-left-item">
+              <a href="#" class="header-link">
+                Pages
+                <i class="header-link-icon ti-angle-down" id="myIcon"></i>
+              </a>
+              <ul class="header-left-item-list">
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Our blog</a></li>
                 <li><a href="#">Token sale</a></li>
@@ -67,13 +71,19 @@
                 <li><a href="#">Page 404</a></li>
               </ul>
             </li>
-            <li><a href="#">Feature</a></li>
-            <li><a href="#">Roadmap</a></li>
-            <li><a href="#">Team</a></li>
+            <li class="header-left-item">
+              <a href="#" class="header-link">Feature</a>
+            </li>
+            <li class="header-left-item">
+              <a href="#" class="header-link">Roadmap</a>
+            </li>
+            <li class="header-left-item">
+              <a href="#" class="header-link">Team</a>
+            </li>
           </ul>
-          <div class="sign">
-            <button class="sign-in-button">Sign In</button>
-          </div>
+
+          <button class="sign-in-button">Sign In</button>
+
         </div>
       </div>
     </div>
@@ -575,9 +585,9 @@
   <section class="team-section">
     <div class="container">
       <div class="team-section-header">
-      <h2>MEET OUR TEAM</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua Ut enim ad minim veniam.</p>
+        <h2>MEET OUR TEAM</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua Ut enim ad minim veniam.</p>
       </div>
       <div class="team-members">
         <div class="team-member">
@@ -647,101 +657,124 @@
   <section class="testimonials-section">
     <div class="container">
       <div class="testimonials-section-header">
-      <h2>WHAT OTHERS SAY?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor et dolore
-        magna aliqua Ut enim ad minim veniam.</p>
+        <h2>WHAT OTHERS SAY?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor et dolore
+          magna aliqua Ut enim ad minim veniam.</p>
       </div>
-      <div class="testimonials-wrapper">
-        <div class="testimonials">
-          <div class="testimonial">
-              <div class="img-star-testi">
-                <img src="accets/image/star.png" alt="">
-              </div>
-            <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters.</p>
-            <div class="customer">
-              <img src="accets/image/author-1.jpg" alt="Dania Xavier">
-              <div class="customer-info">
-                <h3>DANIA XAVIER</h3>
-                <p>Executive Chairman</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial">
-              <div class="img-star-testi">
-                <img src="accets/image/star.png" alt="">
-              </div>
-            <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters.</p>
-            <div class="customer">
-              <img src="accets/image/author-2.jpg" alt="Chrish Dooley">
-              <div class="customer-info">
-                <h3>CHRISH DOOLEY</h3>
-                <p>Marketing Executive</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial">
+      <div class="testimonials">
+        <div class="testimonial">
           <div class="img-star-testi">
             <img src="accets/image/star.png" alt="">
           </div>
-            <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters.</p>
-            <div class="customer">
-              <img src="accets/image/author-3.jpg" alt="Noah Buscheg">
-              <div class="customer-info">
-                <h3>NOAH BUSCHEG</h3>
-                <p>Head of Department</p>
-              </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-1.jpg" alt="Dania Xavier">
+            <div class="customer-info">
+              <h3>DANIA XAVIER</h3>
+              <p>Executive Chairman</p>
             </div>
           </div>
-          <div class="testimonial">
+        </div>
+        <div class="testimonial">
           <div class="img-star-testi">
             <img src="accets/image/star.png" alt="">
           </div>
-            <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters.</p>
-            <div class="customer">
-              <img src="accets/image/author-4.jpg" alt="Stefan Thomas">
-              <div class="customer-info">
-                <h3>STEFAN THOMAS</h3>
-                <p>Marketing Ordinator</p>
-              </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-2.jpg" alt="Chrish Dooley">
+            <div class="customer-info">
+              <h3>CHRISH DOOLEY</h3>
+              <p>Marketing Executive</p>
             </div>
           </div>
-
-          <div class="testimonial">
-            <div class="img-star-testi">
-              <img src="accets/image/star.png" alt="">
+        </div>
+        <div class="testimonial">
+          <div class="img-star-testi">
+            <img src="accets/image/star.png" alt="">
+          </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-3.jpg" alt="Noah Buscheg">
+            <div class="customer-info">
+              <h3>NOAH BUSCHEG</h3>
+              <p>Head of Department</p>
             </div>
-            <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters.</p>
-            <div class="customer">
-              <img src="accets/image/author-5.jpg" alt="Jane Smith">
-              <div class="customer-info">
-                <h3>JANE SMITH</h3>
-                <p>Sales Director</p>
-              </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="img-star-testi">
+            <img src="accets/image/star.png" alt="">
+          </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-4.jpg" alt="Stefan Thomas">
+            <div class="customer-info">
+              <h3>STEFAN THOMAS</h3>
+              <p>Marketing Ordinator</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="img-star-testi">
+            <img src="accets/image/star.png" alt="">
+          </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-5.jpg" alt="Jane Smith">
+            <div class="customer-info">
+              <h3>JANE SMITH</h3>
+              <p>Sales Director</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="img-star-testi">
+            <img src="accets/image/star.png" alt="">
+          </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-5.jpg" alt="Jane Smith">
+            <div class="customer-info">
+              <h3>JANE SMITH</h3>
+              <p>Sales Director</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="img-star-testi">
+            <img src="accets/image/star.png" alt="">
+          </div>
+          <p>Content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters.</p>
+          <div class="customer">
+            <img src="accets/image/author-5.jpg" alt="Jane Smith">
+            <div class="customer-info">
+              <h3>JANE SMITH</h3>
+              <p>Sales Director</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="slider-navigation">
-        <button id="prev">&lt;</button>
-        <button id="next">&gt;</button>
-      </div>
+    </div>
     </div>
   </section>
+
+
 
 
 
   <section class="news-section">
     <div class="container">
       <div class="news-header">
-      <h2>OUR LATEST NEWS</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam.</p>
+        <h2>OUR LATEST NEWS</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam.</p>
       </div>
       <div class="news-articles">
         <div class="news-article">
@@ -751,7 +784,9 @@
           <div class="article-details">
             <p class="date">18 January, 2022 | By Johan</p>
             <a href="#">Cryptcon is a clean, modern template clean</a>
-            <a href="#" style="color: white; ">Read More →</a>
+            <a href="#" style="  color: rgba(255, 89, 0, 0.744); ">Read More
+              <span class="ti-arrow-right"></span>
+            </a>
           </div>
         </div>
         <div class="news-article">
@@ -761,7 +796,9 @@
           <div class="article-details">
             <p class="date">18 January, 2022 | By Johan</p>
             <a href="#">Cryptcon is a clean, modern template clean</a>
-            <a href="#" style="color: white; ">Read More →</a>
+            <a href="#" style="color:  rgba(255, 89, 0, 0.744);">Read More
+              <span class="ti-arrow-right"></span>
+            </a>
           </div>
         </div>
         <div class="news-article">
@@ -771,7 +808,9 @@
           <div class="article-details">
             <p class="date">18 January, 2022 | By Johan</p>
             <a href="">Cryptcon is a clean, modern template clean</a>
-            <a href="#" style="color: white;">Read More →</a>
+            <a href="#" style="  color: rgba(255, 89, 0, 0.744);">Read More
+              <span class="ti-arrow-right"></span>
+            </a>
           </div>
         </div>
       </div>
@@ -809,18 +848,18 @@
     </div>
   </section>
 
-  <footer class="footer" data-aos="slide-up" data-aos-offset="10">
+  <footer class="footer">
     <div class="container">
       <div class="footer-columns">
         <div class="footer-column">
           <img src="accets/image/logo.png" alt="Cryptcon Logo" style="width: 190px; margin-bottom: 10px;">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s.</p>
+            industry's</p>
           <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" style="color: white;"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter" style="color: white;"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram" style="color: white;"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest" style="color: white;"></i></a>
           </div>
         </div>
         <div class="footer-column">
@@ -854,18 +893,24 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© Cryptcon all Rights Reserved. Designed by <a href="http://TemplatesCoder.com">TemplatesCoder.com</a> | <a
-          href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+      <div class="footer-bottom-left">
+        <p>© Cryptcon all Rights Reserved. Designed by <a href="http://TemplatesCoder.com">TemplatesCoder.com</a>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+      </div>
     </div>
   </footer>
   <script src="accets/js/index.js"></script>
-  <script src="accets/js/testimonials.js"></script>
   <script src="accets/js/brand-logo.js"></script>
   <script src="accets/js/roadmap.js"></script>
+  <script src="accets/js/scrollheader.js"></script>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="./slick/slick/slick.min.js"></script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -874,10 +919,56 @@
         slidesToScroll: 1,
         speed: 300,
         infinite: true,
-        // nextArrow: '.nextArrow',
-        // prevArrow: '.prevArrow'
+        nextArrow: '<span class="roadmap-next-button">></span>',
+        prevArrow: '<span class="roadmap-prev-button"><</span>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          }
+        ]
+      });
+
+      $('.testimonials').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        nextArrow: '<span class="testimonials-next-button">></span>',
+        prevArrow: '<span class="testimonials-prev-button"><</span>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          }
+        ]
       });
     });
+
 
 
     const onClickYear = (year) => {
@@ -903,7 +994,13 @@
         $(roadmapListByYear).slick('setPosition');
       }
     };
+
+
+
   </script>
+
+
+
 </body>
 
 </html

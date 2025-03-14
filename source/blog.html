@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../accets/css/">
+<body>
+
+<div class="w3-bar w3-red">
+    <a href="trang-chu.html" class="w3-button">
+        <img src="../accets/image/logo.png" alt="Logo" style="width:40px; height:40px;">
+    </a>
+    
+
+  <a href="#" class="w3-bar-item w3-button w3-hide-small">
+    <img src="path-to-your-link1-image.png" alt="Link 1" style="width:20px; height:20px;">
+  </a>
+
+  <!-- Dropdown -->
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button">
+        <img src="path-to-your-dropdown-image.png" alt="Dropdown" style="width:20px; height:20px;">
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="#" class="w3-bar-item w3-button">Link 4</a>
+      <a href="#" class="w3-bar-item w3-button">Link 5</a>
+    </div>
+  </div>
+
+  <a href="#" class="w3-bar-item w3-button w3-hide-small">
+    <img src="path-to-your-link3-image.png" alt="Link 3" style="width:20px; height:20px;">
+  </a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+  <a href="#" class="w3-bar-item w3-button">
+        <img src="path-to-your-link1-image.png" alt="Link 1" style="width:20px; height:20px;">
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+
+    <!-- Dropdown for mobile view -->
+    <div class="w3-dropdown-click">
+        <button onclick="myDropFunc()" class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
+        <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Link 4</a>
+            <a href="#" class="w3-bar-item w3-button">Link 5</a>
+        </div>
+    </div>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+
+<div class="w3-container">
+  <p>In the example, the navigation bar is replaced with a button (☰) in the top right corner when shown on tablets and mobile devices. When the button is clicked, the links in the bar will vertically stack.</p>
+  <p>Resize the screen to see the effect.</p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myDropFunc() {
+    var x = document.getElementById("demoDrop");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
